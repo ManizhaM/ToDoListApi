@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "6d2cd2b9-d61a-4c03-8149-821a6f1e736a",
+		"name": "ToDoList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34366797"
+	},
+	"item": [
+		{
+			"name": "To Do List Items",
+			"item": [
+				{
+					"name": "AddNewToDoItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Название задачи\",\r\n    \"description\": \"Описание задачи\",\r\n    \"isCompleted\": false,\r\n    \"dueDate\": \"2024-07-17T00:00:00\",\r\n    \"priorityId\": 1,\r\n    \"userId\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/ToDoItems/AddNewToDoItem"
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllToDoItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/ToDoItems/GetAllToDoItems"
+					},
+					"response": []
+				},
+				{
+					"name": "GetToDoItemById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{base_url}}/api/ToDoItems/GetToDoItemById/itemId=5"
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateToDoItem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Id\":3,\r\n    \"title\":\"new Title32\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/ToDoItems/UpdateToDoItem"
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteToDoItem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{base_url}}/api/ToDoItems/DeleteToDoItem/itemId=2"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "AddNewUser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Leo\",\r\n    \"PhoneNumber\":\"9454545450\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{base_url}}/api/Users/AddNewUser"
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeUserStatus",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "{{base_url}}/api/Users/ChangeUserStatus/user=1/status=false"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
