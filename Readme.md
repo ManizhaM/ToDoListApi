@@ -1,4 +1,4 @@
-﻿# ToDoListApi
+# ToDoListApi
 
 ## Description
 
